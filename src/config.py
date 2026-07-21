@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     redis_url: str = "redis://localhost:6379"
     pipeline_schedule_interval_minutes: int = 15
     log_level: str = "INFO"
+    checkpoint_dir: str = "/data/checkpoints"  # DF-09: persistent path, overridden via CHECKPOINT_DIR env var
 
     class Config:
         env_file = ".env"
